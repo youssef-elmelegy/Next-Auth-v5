@@ -1,4 +1,5 @@
 // import React, { ReactNode } from "react";
+import React from "react";
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (

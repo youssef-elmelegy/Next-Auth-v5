@@ -43,8 +43,12 @@ const LoginForm = () => {
 
     startTransition(() => {
       login(values).then((data) => {
-        setError(data.error);
-        setSuccess(data.success);
+        if (data) {
+          setError(data.error || ""); // Default to empty string if error is undefined
+          setSuccess(data.success || ""); // Default to empty string if success is undefined
+        } else {
+          setError("Something went wrong."); // Handle the case where data is undefined
+        }
       });
     });
   };

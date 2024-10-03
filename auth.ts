@@ -8,6 +8,7 @@ export const {
   handlers: { GET, POST },
   auth,
   signIn,
+  handlers,
   signOut,
 } = NextAuth({
   adapter: PrismaAdapter(db),
